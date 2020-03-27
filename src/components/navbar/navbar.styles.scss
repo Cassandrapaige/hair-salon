@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+
+.nav {
+    position: relative;
+    padding-top: 10px;
+
+    .logo {
+        color: #c0c0c0;
+    }
+    
+    &-list {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 30px;
+        opacity: 0;
+
+        li {
+            padding: 40px 20px;
+            font-size: 19px;
+        }
+    }
+
+    h4 {
+        padding: 40px 20px;
+        position: absolute;
+        transform: translateY(-50%) rotate(-8deg);
+        top: 50%;
+        left: 30px;
+        color: #fff;
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+    }
+}
+
+.hamburger-menu {
+    height: 2px;
+    width: 70px;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    right: 50px;
+    transform: translatey(-50%);
+    opacity: 0;
+
+    &:before {
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 60px;
+        background: #fff;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        right: 0px;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 55px;
+        background: #fff;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        right: 0px;
+    }
+}

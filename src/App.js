@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import './App.scss';
+import { Route, Switch } from 'react-router-dom'
 
-function App() {
+
+import Navbar from './components/navbar/navbar.component'
+import Layout from './pages/layout/layout.component'
+import ModalContainer from './components/modal/modal-container/modal-container.component'
+import Video from './components/video/video.component'
+
+const App = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsActive(true)
+    }, 1000)
+  },[])
+
+  const activateModal = () => setIsActive(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Navbar/>
+      {isActive ? 
+        <ModalContainer handleClick = {activateModal} />
+        : ''
+      }
+      <Switch>
+          <Route exact path='/' component={Layout} />
+      </Switch>
+</div>
   );
 }
 

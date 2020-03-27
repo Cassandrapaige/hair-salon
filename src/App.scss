@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
+* {
+box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background: #191919;
+} 
+
+.header {
+  min-height: 100vh;
+  opacity: .9;
+  width: 100%;
+  filter: grayscale(100%);
+  filter: hue-rotate(260deg);
+  position: relative;
+  background-size: cover;
+
+  @media (max-width: 650px) { 
+    background-size: cover;
+
+  }
+}
+
+.overlay {
+  background: rgba(19, 19, 19, .5);
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0px;
+  width: 150%;
+  max-width: 100vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
+  padding-right: 50px;
+  padding-top: 50px;
+  line-height: 100px;
+  h2 {
+    color: #c0c0c0;
+    font-family: 'Bangers', cursive;
+    font-size: 110px;
+    position: relative;
+    transition: all .2s ease;
+
+    &:after {
+      position: absolute;
+      content: '';
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #c0c0c0;
+      width: 20px;
+      height: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: #33b77e;
+      font-size: 125px;
+      padding-right: 30px;
+
+      &:after {
+        background: #33b77e;
+        width: 40px;
+      }
+    }
+
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(rgba(19,19,19,.3), rgba(145,152,229,.8));
+    bottom: 30px;
+    left: 100px;
+    transform: rotate(155deg);
+    transform-origin: 50% 100% ;
+    z-index: 300;
+    mix-blend-mode: saturation;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(rgba(19,19,19,.3), rgba(145,152,229,.8));
+    bottom: 30px;
+    right: 100px;
+    transform: rotate(-155deg);
+    transform-origin: 50% 100% ;
+    z-index: 300;
+    mix-blend-mode: saturation;
+  }
+
+  img {
+    width: 25%;
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}

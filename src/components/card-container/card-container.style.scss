@@ -1,0 +1,12 @@
+.card-container {
+    width: auto;
+    display: grid;
+    position: relative;
+    margin: 50px auto;
+    overflow: scroll;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}

@@ -12,26 +12,47 @@ import video2 from '../../assets/video2.mp4'
 
 const Layout = () => {
     const [videoUrl, setVideoUrl] = useState(video);
+    const [isActive, setIsActive] = useState(true);
+
+    const handleMouseEnter = event => {
+        event.target.play()
+    }
+
+    const handleMouseLeave = event => {
+        event.target.pause()
+    }
 
     return (
         <>
         <div className = 'header' style = {{backgroundImage: `url('http://www.sugarcoatnailbar.com/wp-content/uploads/2017/06/how-to-makeup-your-face-like-beauty-salon.jpg')`}}>
             <div className="overlay">
-                <h2>Hair</h2>
-                <h2>Design</h2>
-                <h2>Make-up</h2>
-                <h2>Beauty</h2>
-                <h2>Salon</h2>
-            </div>
+                <div className="inner-content">
+                    <h4>Voted #1 in Toronto for 5 years</h4>
+                    <h1>Award Winning Salon</h1>
+                    <div className="buttons">
+                    <button>View our gallery</button>
+                    <button>Book an appointment</button>
+                </div>
+                </div>
+          </div>
         </div>
         <Container>
             <h2><span>Our</span> <span>Services</span></h2>
             <CardContainer />
         </Container>
         <div className="videos">
-            <Video src = {video} />
-            <Video src = {video1} />
-            <Video src = {video2} />
+            <Video 
+                src = {video} 
+                handleMouseEnter = {handleMouseEnter} 
+                handleMouseLeave = {handleMouseLeave} />
+            <Video 
+                src = {video1} 
+                handleMouseEnter = {handleMouseEnter} 
+                handleMouseLeave = {handleMouseLeave}/>
+            <Video 
+                src = {video2} 
+                handleMouseEnter = {handleMouseEnter} 
+                handleMouseLeave = {handleMouseLeave}/>
         </div>
         </>
     )

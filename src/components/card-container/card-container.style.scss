@@ -3,10 +3,11 @@
     display: grid;
     position: relative;
     margin: 50px auto;
-    overflow: scroll;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    text-align: center;
 
-    &::-webkit-scrollbar {
-        display: none;
-      }
+    @media (max-width: 550px) { 
+        margin:0px;
+        grid-template-columns: 1fr;
+    }
 }

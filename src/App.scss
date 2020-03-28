@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
 
 * {
 box-sizing: border-box;
@@ -39,41 +40,84 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  padding-right: 50px;
-  padding-top: 50px;
-  line-height: 100px;
-  h2 {
-    color: #c0c0c0;
-    font-family: 'Bangers', cursive;
-    font-size: 110px;
-    position: relative;
-    transition: all .2s ease;
 
-    &:after {
-      position: absolute;
-      content: '';
-      right: -40px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #c0c0c0;
-      width: 20px;
-      height: 5px;
+  .inner-content {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    position: relative;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 50px;
+    background: rgba(19, 19, 19, .4);
+    box-shadow: 0px 3px 6px rgba(19, 19, 19, .2);
+
+    h1 {
+      color: #fff;
+      font-size: 75px;
+      line-height: 70px;
     }
 
-    &:hover {
-      cursor: pointer;
-      color: #33b77e;
-      font-size: 125px;
-      padding-right: 30px;
+    h4 {
+      color: #fff;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: 400;
+    }
 
-      &:after {
-        background: #33b77e;
-        width: 40px;
+    @media (max-width: 850px) { 
+      width: 90%;
+      padding: 80px 20px;
+
+      h1 {
+        font-size: 50px;
+        line-height: 50px;
+      }
+
+      .buttons {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 8px;
+
+        button {
+          padding: 20px;
+        }
       }
     }
+  }
 
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    left: 0;
+    right: 0;
+    gap: 20px;
+    margin-top: 30px;
+    background: #33b77e;
+    width: 100%;
+    bottom: -80px;
+    padding: 20px;
+    border: 1px solid #fff;
+
+    button {
+      background: #fff;
+      width: 100%;
+      padding: 30px;
+      grid-column: span 1;
+      color: #191919;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      box-shadow: 0px 3px 6px rgba(19, 19, 19, .2);
+
+      &:nth-of-type(2) {
+        background: #191919;
+        color: #fff;
+      }
+    }
   }
 
   &:before {

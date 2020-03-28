@@ -8,13 +8,27 @@
     h2 {
         grid-column: 1/-1;
         text-align: center;
-        color: #c0c0c0;
+        color: #fff;
         font-size: 80px;
         font-family: 'Bangers', cursive;
+        padding-top: 40px;
 
         span{
             display: inline-block;
             transform: rotate(-8deg);
         }
     }
+
+    @media (max-width: 550px) { 
+        padding: 0;
+
+        h2 {
+            font-size: 50px;
+
+            span{
+                transform: rotate(0deg);
+            }
+        }
+    }
+
 }

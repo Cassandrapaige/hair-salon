@@ -1,0 +1,18 @@
+.nav-list {
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        font-family: 'Bangers', cursive;
+    }
+
+    @media (max-width: 850px) { 
+
+        button {
+            font-size: 50px !important;
+            line-height: 60px !important;
+        }
+
+    }
+}
+

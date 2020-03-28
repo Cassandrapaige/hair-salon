@@ -22,43 +22,34 @@ const ModalContainer = ({handleClick}) => {
 
     const slideUp = useSpring({
         from: {
-            transform: 'translateY(30px)',
+            transform: 'translateY(50px)',
+            opacity: 0
         },
         to: {
-            transform: 'translateY(0px)'
+            transform: 'translateY(0px)',
+            opacity: 1
         },
         config: config.wobbly
     })
 
-    const fadeIn = useSpring({
-        from: {
-            opacity: 0
-        },
-        to: {
-            opacity: 1
-        },
-        config: {
-            duration:500,
-        }
-    })
-
     return (
 
-        <animated.div className = 'modal-container' style = {fadeIn}>
+        <animated.div className = 'modal-container' style = {slideUp}>
             <div className="promotion">
                 <h3>Spring Sale</h3>
                 <span>
                     50% off
                 </span>
             </div> 
-            <animated.div className="promtion-sign-up" style= {slideUp}>
+            <animated.div className="promtion-sign-up">
                 <h4>Enter your email for 50% off your next visit</h4>  
                 <form>
                     <div className="inputs">
                     <input 
-                        type="text" 
+                        type="email" 
                         placeholder = 'enter your email address' 
-                        ref = {inputRef}/>
+                        ref = {inputRef}
+                        required/>
 
                     <div className="checkbox">
                         <input type="checkbox" 

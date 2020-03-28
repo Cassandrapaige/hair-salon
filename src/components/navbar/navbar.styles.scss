@@ -1,27 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
 
 .nav {
     position: relative;
     padding-top: 10px;
+    min-height: 110px;
 
     .logo {
-        color: #c0c0c0;
-    }
-    
-    &-list {
-        list-style-type: none;
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 30px;
-        opacity: 0;
-
-        li {
-            padding: 40px 20px;
-            font-size: 19px;
-        }
-    }
-
-    h4 {
         padding: 40px 20px;
         position: absolute;
         transform: translateY(-50%) rotate(-8deg);
@@ -30,41 +13,94 @@
         color: #fff;
         font-size: 60px;
         font-family: 'Great Vibes', cursive;
+        color: #fff;
+
+        @media (max-width: 550px) { 
+            font-size: 30px;
+        }
     }
 }
 
-.hamburger-menu {
-    height: 2px;
-    width: 70px;
-    background: #fff;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    right: 50px;
-    transform: translatey(-50%);
-    opacity: 0;
-
-    &:before {
-        position: absolute;
-        content: '';
-        height: 3px;
-        width: 60px;
-        background: #fff;
-        position: absolute;
-        right: 0;
-        top: 20px;
-        right: 0px;
-    }
-
-    &:after {
-        position: absolute;
-        content: '';
-        height: 3px;
+    .hamburger-menu {
+        height: 40px;
         width: 55px;
-        background: #fff;
         position: absolute;
         right: 0;
-        top: -20px;
-        right: 0px;
+        top: 50%;
+        right: 50px;
+        transform: translatey(-50%);
+        display: flex;
+        justify-content: flex-end;
+        transition: all .5s ease;
+
+        &-top,
+        &-middle,
+        &-bottom {
+            position: absolute;
+            background: #fff;
+            height: 3px;
+        }
+
+        &-top {
+            top: 0;
+            width: 80%;
+        }
+
+        &-middle {
+            top: 50%;
+            transform: translatey(-50%);
+            width: 100%;
+        }
+
+        &-bottom {
+            bottom: 0;
+            width: 95%;
+        }
+
+        @media (max-width: 550px) { 
+            width: 40px !important;
+            height: 30px !important;
+            right: 30px;
+        }
     }
+    .open {
+        height: 40px;
+        width: 55px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        right: 50px;
+        transform: translatey(-50%);
+        display: flex;
+        justify-content: flex-end;
+        transition: all .5s ease;
+         
+        &-top,
+        &-middle,
+        &-bottom {
+            position: absolute;
+            background: #fff;
+            height: 3px;
+        }
+
+        &-top {
+            top: 50%;
+            width: 100%;
+            transform: rotate(-45deg) translateY(-50%);
+        }
+
+        &-middle {
+            opacity: 0;
+        }
+
+        &-bottom {
+            top: 50%;
+            width: 100%;
+            transform: rotate(45deg) translateY(-50%);
+        }
+        @media (max-width: 550px) { 
+            width: 40px !important;
+            height: 30px !important;
+            right: 30px;
+        }
 }

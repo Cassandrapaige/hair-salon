@@ -9,7 +9,18 @@
     align-items: center;
     background-size: contain;
     background-position: center;
+    background-repeat: repeat;
     position: relative;
     filter: grayscale(100%);
     filter: hue-rotate(250deg);
+
+    &:nth-of-type(2) {
+        animation: backgroundScroll 15s linear infinite;
+        animation-direction: alternate;
+    }
+}
+
+@keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -580px 0px;}
 }

@@ -27,7 +27,7 @@ const DATA = [
             id: 5,
             title: 'Endless Colour',
             text: 'This is some text',
-            image: 'https://tse2.mm.bing.net/th?id=OIP.IsGf-qtlvds2Jsxokyj94wHaEK&pid=Api'
+            image: 'https://i.pinimg.com/originals/7c/c6/ed/7cc6edf1f282023b2ea6630b643a46a7.jpg'
         },
         {
             id: 6,

@@ -24,8 +24,8 @@
     }
 
     .hamburger-menu {
-        height: 40px;
-        width: 55px;
+        height: 50px;
+        width: 45px;
         position: fixed;
         right: 0;
         top: 50px;
@@ -41,7 +41,7 @@
         &-bottom {
             position: absolute;
             background: #fff;
-            height: 3px;
+            height: 2px;
         }
 
         &-top {
@@ -67,8 +67,8 @@
         }
     }
     .open {
-        height: 40px;
-        width: 55px;
+        height: 35px;
+        width: 50px;
         position: absolute;
         right: 0;
         top: 50px;

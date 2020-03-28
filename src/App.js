@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsActive(true)
-    }, 1000)
+    }, 2500)
   },[])
 
   const activateModal = () => setIsActive(false);

@@ -22,11 +22,6 @@ body {
   filter: hue-rotate(260deg);
   position: relative;
   background-size: cover;
-
-  @media (max-width: 650px) { 
-    background-size: cover;
-
-  }
 }
 
 .overlay {

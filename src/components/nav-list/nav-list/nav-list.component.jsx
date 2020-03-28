@@ -15,7 +15,8 @@ const NavList = ({active}) => {
             alignItems: 'center',
             flexDirection: 'column',
             height: '100%',
-            position: 'absolute',
+            position: 'fixed',
+            top: 0,
             right: 0,
             background: 'rgba(19, 19, 19, .99)',
             zIndex: 10000

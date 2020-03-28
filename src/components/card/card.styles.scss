@@ -15,8 +15,7 @@
     filter: hue-rotate(250deg);
 
     &:nth-of-type(2) {
-        animation: backgroundScroll 15s linear infinite;
-        animation-direction: alternate;
+        animation: backgroundScroll 15s linear infinite alternate;
     }
 }
 

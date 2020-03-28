@@ -6,9 +6,9 @@ import Container from '../../components/container/container.component'
 import CardContainer from '../../components/card-container/card-container.component'
 import Video from '../../components/video/video.component'
 
-import video from '../../assets/video.mp4'
-import video1 from '../../assets/video1.mp4'
-import video2 from '../../assets/video2.mp4'
+import video from '../../videos/video.mp4'
+import video1 from '../../videos/video1.mp4'
+import video2 from '../../videos/video2.mp4'
 
 const Layout = () => {
     const [videoUrl, setVideoUrl] = useState(video);

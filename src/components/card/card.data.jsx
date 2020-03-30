@@ -1,39 +1,46 @@
+import image1 from '../../images/image1.jpg'
+import image2 from '../../images/image2.jpg'
+import image3 from '../../images/image3.jpg'
+import image4 from '../../images/image4.jpg'
+import image5 from '../../images/image5.jpg'
+import image6 from '../../images/image6.jpg'
+
 const DATA = [
         {
             id: 1,
             title: 'Make-up',
             text: 'This is some text',
-            image: 'http://aadblog.com/wp-content/uploads/2015/08/aad-blog-unconventional-lip-colors-you-need-to-try-black.jpg'
+            image: image1
         },
         {
             id: 2,
             title: 'Trendy Hair Styles',
             text: 'This is some text',
-            image: 'https://www.aber-net.com/image/PAUL%20MITCHELL.jpg'
+            image: image2
         },
         {
             id: 3,
             title: 'Chic Updos',
             text: 'This is some text',
-            image: 'https://s-media-cache-ak0.pinimg.com/564x/94/b0/9a/94b09a1a172abfd607de1af1ed4ceac2.jpg'
+            image: image3
         },
         {
             id: 4,
             title: 'Nail Art',
             text: 'This is some text',
-            image: 'https://tse4.mm.bing.net/th?id=OIP.X8-AqZ-254GkugYAcnOlowHaJ_&pid=Api'
+            image: image4
         },
         {
             id: 5,
             title: 'Endless Colour',
             text: 'This is some text',
-            image: 'https://i.pinimg.com/originals/7c/c6/ed/7cc6edf1f282023b2ea6630b643a46a7.jpg'
+            image: image5
         },
         {
             id: 6,
             title: 'Body Jewels',
             text: 'This is some text',
-            image: 'http://www.daz3d.com/media/catalog/product/cache/1/image/960x1248/17f82f742ffe127f42dca9de82fb58b1/0/0/00-main-piercing-collection-daz3d.jpg'
+            image: image6
         }
 ]
 

@@ -6,6 +6,8 @@ import Container from '../../components/container/container.component'
 import CardContainer from '../../components/card-container/card-container.component'
 import Video from '../../components/video/video.component'
 
+import headerImage from '../../images/header.jpg'
+
 import video from '../../videos/video.mp4'
 import video1 from '../../videos/video1.mp4'
 import video2 from '../../videos/video2.mp4'
@@ -24,7 +26,7 @@ const Layout = () => {
 
     return (
         <>
-        <div className = 'header' style = {{backgroundImage: `url('http://www.sugarcoatnailbar.com/wp-content/uploads/2017/06/how-to-makeup-your-face-like-beauty-salon.jpg')`}}>
+        <div className = 'header' style = {{backgroundImage: `url(${headerImage})`}}>
             <div className="overlay">
                 <div className="inner-content">
                     <h4>Voted #1 in Toronto for 5 years</h4>

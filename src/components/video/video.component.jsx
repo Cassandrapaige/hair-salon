@@ -5,6 +5,7 @@ import './video.styles.scss'
 const Video = ({src, handleMouseEnter, handleClick, handleMouseLeave}) => {
     return ( 
         <video 
+            playsInline loop muted
             id="myVideo" 
             onMouseEnter = {handleMouseEnter} 
             onMouseLeave = {handleMouseLeave}
